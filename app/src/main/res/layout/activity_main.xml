@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/home_radio_button"
+            style="@style/MainButtonStyle"
+            android:drawableTop="@drawable/home_button_selector"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/loans_radio_button"
+            style="@style/MainButtonStyle"
+            android:drawableTop="@drawable/loans_button_selector"
+            android:text="贷款" />
+
+        <RadioButton
+            android:id="@+id/discover_radio_button"
+            style="@style/MainButtonStyle"
+            android:drawableTop="@drawable/discover_button_selector"
+            android:text="发现" />
+
+        <RadioButton
+            android:id="@+id/me_radio_button"
+            style="@style/MainButtonStyle"
+            android:drawableTop="@drawable/me_button_selector"
+            android:text="我的" />
+    </RadioGroup>
+</LinearLayout>

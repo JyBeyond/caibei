@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <!--背景颜色 -->
+    <color name="background">#F6F6F6</color>
+    <!--线条颜色 -->
+    <color name="lineClr">#E8E8E8</color>
+    <!--标题、功能模块文本、输入内容、文本 -->
+    <color name="titleClr">#1C1C1C</color>
+    <!--tabBar文字、文本 -->
+    <color name="textClr">#5D5D5D</color>
+    <!--小标题、列表文字说明、时间提醒等 -->
+    <color name="pointClr">#8D8D8D</color>
+    <!--提示信息、提示状态不可点 -->
+    <color name="hintClr">#C8C8C8</color>
+    <!--店家主题颜色 -->
+    <!--<color name="themeClr">#F92A5E</color>-->
+    <!--<color name="themeClr_press">#DD1144</color>-->
+    <color name="themeClr">#7361E9</color>
+    <color name="themeClr_press">#DD1144</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="blueLightClr">#42A2E2</color>
+    <color name="blueDarkClr">#3289D2</color>
+    <color name="narmal_btn_press">#F0F0F0</color>
+    <color name="devide_line_color">#C9C9C9</color>
+</resources>
