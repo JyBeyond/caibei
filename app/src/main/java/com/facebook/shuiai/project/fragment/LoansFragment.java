@@ -1,7 +1,9 @@
 package com.facebook.shuiai.project.fragment;
 
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
+
+import com.facebook.shuiai.project.R;
 
 /**
  * @author shuiai@dianjia.io
@@ -12,8 +14,7 @@ import android.widget.TextView;
 public class LoansFragment extends BaseFragment {
     @Override
     public View initView() {
-        TextView textView = new TextView(mContext);
-        textView.setText("貸款");
-        return textView;
+        View view = LayoutInflater.from(mContext).inflate(R.layout.fragment_loans, null);
+        return view;
     }
 }

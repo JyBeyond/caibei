@@ -2,5 +2,6 @@
     <string name="app_name">采贝借款</string>
     <string name="home_input">请输入借款额度</string>
     <string name="discover_module">发现</string>
+    <string name="loans_module">采贝贷超</string>
     <string name="default_value">--</string>
 </resources>

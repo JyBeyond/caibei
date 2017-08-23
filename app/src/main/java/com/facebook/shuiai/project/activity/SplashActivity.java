@@ -7,4 +7,5 @@ package com.facebook.shuiai.project.activity;
  */
 
 public class SplashActivity extends BaseActivity {
+
 }
