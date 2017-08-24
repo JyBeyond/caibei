@@ -4,18 +4,24 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.view.KeyEvent;
 import android.widget.FrameLayout;
 import android.widget.RadioGroup;
 
 import com.facebook.shuiai.project.R;
+import com.facebook.shuiai.project.application.MyApplication;
 import com.facebook.shuiai.project.fragment.BaseFragment;
 import com.facebook.shuiai.project.fragment.DiscoverFragment;
 import com.facebook.shuiai.project.fragment.HomeFragment;
 import com.facebook.shuiai.project.fragment.LoansFragment;
 import com.facebook.shuiai.project.fragment.PersonFragment;
+import com.facebook.shuiai.project.util.ActivityUtil;
 import com.facebook.shuiai.project.util.StatusBarUtil;
+import com.facebook.shuiai.project.util.ToastUtils;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends BaseActivity {
 
@@ -27,6 +33,7 @@ public class MainActivity extends BaseActivity {
     private int position = 0;
     //缓存Fragment或上次显示的Fragment
     private Fragment tempFragment;
+    private boolean isExit;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -109,5 +116,32 @@ public class MainActivity extends BaseActivity {
             return baseFragment;
         }
         return null;
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            exitBy2Click();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    private void exitBy2Click() {
+        Timer tExit;
+        if (!isExit) {
+            isExit = true; // 准备退出
+            ToastUtils.showToast(this, "再按一次退出程序");
+            tExit = new Timer();
+            tExit.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    isExit = false; // 取消退出
+                }
+            }, 2000);
+
+        } else {
+            ActivityUtil.exitApp(MyApplication.activitys);
+        }
     }
 }

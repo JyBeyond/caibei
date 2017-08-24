@@ -3,4 +3,38 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="status_bar_height">0dp</dimen>
+    <!--字体大小-->
+    <dimen name="txt_eighteen_size">18sp</dimen>
+    <!--用于titleBar标题文案的字体大小-->
+    <dimen name="txt_seventeen_size">17sp</dimen>
+    <!--用于大标题、模块主题等的字体大小-->
+    <dimen name="txt_sixteen_size">16sp</dimen>
+    <!--用于列表、标签、标题题文案等的字体大小-->
+    <dimen name="txt_fourteen_size">14sp</dimen>
+    <!--用于列表、表单等时间信息、辅助字体大小 -->
+    <dimen name="txt_twelve_size">12sp</dimen>
+    <!--用于titleBar、说明文案、提示信息的字体大小-->
+    <dimen name="txt_ten_size">10sp</dimen>
+    <!--间距-->
+    <!--横向分割线的宽度-->
+    <dimen name="line_margin_horizontal">0.5dp</dimen>
+    <!--竖直分割线的宽度-->
+    <dimen name="line_margin_vertical">1dp</dimen>
+    <dimen name="dp_two_margin">2dp</dimen>
+    <dimen name="dp_three_margin">3dp</dimen>
+    <dimen name="dp_four_margin">4dp</dimen>
+    <dimen name="dp_five_margin">5dp</dimen>
+    <dimen name="dp_six_margin">6dp</dimen>
+    <dimen name="dp_seven_margin">7dp</dimen>
+    <dimen name="dp_eight_margin">8dp</dimen>
+    <dimen name="dp_ten_margin">10dp</dimen>
+    <dimen name="dp_twelve_margin">12dp</dimen>
+    <dimen name="dp_sixteen_margin">16dp</dimen>
+    <dimen name="dp_twenty_margin">20dp</dimen>
+    <dimen name="dp_thirty_margin">30dp</dimen>
+    <dimen name="dp_forty_margin">40dp</dimen>
+    <dimen name="dp_forty_four_margin">44dp</dimen>
+
+    <!-- 顶部状态栏高度 -->
+    <dimen name="tab_top_title_height">45dp</dimen>
 </resources>
