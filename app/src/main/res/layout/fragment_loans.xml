@@ -33,15 +33,19 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/through_rate_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
 
             <TextView
+                android:id="@+id/txt_through_rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="额度" />
+                android:text="通过率"
+                android:textColor="@color/textClr"
+                android:textSize="@dimen/txt_fourteen_size" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -50,11 +54,13 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img_through_rate_up"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/screen_up_unselect" />
 
                 <ImageView
+                    android:id="@+id/img_through_rate_down"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
@@ -63,16 +69,19 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/through_put_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-
             android:gravity="center">
 
             <TextView
+                android:id="@+id/txt_through_put"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="期限" />
+                android:text="放宽速度"
+                android:textColor="@color/textClr"
+                android:textSize="@dimen/txt_fourteen_size" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -81,11 +90,13 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img_through_put_up"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/screen_up_unselect" />
 
                 <ImageView
+                    android:id="@+id/img_through_put_down"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
@@ -94,15 +105,19 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/month_rate_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
 
             <TextView
+                android:id="@+id/txt_month_rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="月利率" />
+                android:text="月利率"
+                android:textColor="@color/textClr"
+                android:textSize="@dimen/txt_fourteen_size" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -111,11 +126,13 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/img_month_rate_up"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/screen_up_unselect" />
 
                 <ImageView
+                    android:id="@+id/img_month_rate_down"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
@@ -148,68 +165,15 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
+
+    <com.facebook.shuiai.project.view.MPtrClassicFrameLayout
+        android:id="@+id/ptrClassicFrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="金额"
-                android:textColor="@color/textClr"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@drawable/input_shape"
-                android:gravity="center"
-                android:maxLines="1"
-                android:text="@string/default_value"
-                android:textColor="@color/textClr"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="期限"
-                android:textColor="@color/textClr"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@drawable/input_shape"
-                android:gravity="center"
-                android:maxLines="1"
-                android:text="@string/default_value"
-                android:textColor="@color/textClr"
-                android:textSize="14sp" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.facebook.shuiai.project.view.MPtrClassicFrameLayout>
 </LinearLayout>

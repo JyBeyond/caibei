@@ -16,5 +16,19 @@ public class ConstantUtil {
      * 首页信息统计实时推送
      */
     public static final String NEWORDERINFO = BASEPATH + "front/order/newOrderInfo.json";
+    /**
+     * 借贷产品列表
+     */
+    public static final String LENDPAGE = BASEPATH + "front/lend/lendPage.json";
 
+    /**
+     * 保险产品列表
+     */
+    public static final String SAFEPAGE = BASEPATH + "front/safe/safePage.json";
+
+
+    /**
+     * 信用卡产品列表
+     */
+    public static final String CREDITPAGE = BASEPATH + "front/credit/creditPage.json";
 }

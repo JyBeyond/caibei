@@ -106,7 +106,7 @@ public class HomeFragment extends BaseFragment implements PtrHandler {
         ptrClassicFrameLayout.refreshComplete();
         switch (what) {
             case RequestConstantUtil.FIRST_TASK_WHAT:
-                ResultDto<List<HomeInfoAtom>> resultDto = GsonUtil.getInstance().fromJson((String) result.get(), new TypeToken<ResultDto<List<HomeInfoAtom>>>() {
+                ResultDto<List<HomeInfoAtom>, Object> resultDto = GsonUtil.getInstance().fromJson((String) result.get(), new TypeToken<ResultDto<List<HomeInfoAtom>, Object>>() {
                 }.getType());
                 if (resultDto == null)
                     return;

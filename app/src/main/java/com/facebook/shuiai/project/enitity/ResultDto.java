@@ -1,11 +1,12 @@
 package com.facebook.shuiai.project.enitity;
 
 
-public class ResultDto<T> {
+public class ResultDto<T, K> {
     private String resultCode;
     // 返回的结果对象
     private T properties;
     private String message;
+    private K listData;
 
     public String getResultCode() {
         return resultCode;
@@ -29,5 +30,13 @@ public class ResultDto<T> {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public K getListData() {
+        return listData;
+    }
+
+    public void setListData(K listData) {
+        this.listData = listData;
     }
 }

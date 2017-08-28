@@ -5,6 +5,7 @@ import android.content.Context;
 import com.facebook.shuiai.project.enitity.ResultDto;
 import com.facebook.shuiai.project.util.GsonUtil;
 import com.facebook.shuiai.project.util.LoadingAnimationUtil;
+import com.facebook.shuiai.project.util.LogUtils;
 import com.yanzhenjie.nohttp.OkHttpNetworkExecutor;
 import com.yolanda.nohttp.FileBinary;
 import com.yolanda.nohttp.Headers;
@@ -222,6 +223,7 @@ public class HttpRequestManager {
                     //返回结果为""不做处理
                     return;
                 }
+                LogUtils.d("RESPONSEINFO", params.url + ":" + response.get());
                 //判断返回的状态是否成功
                 boolean status = responseStringStatus(params.context, response);
                 if (status) {
@@ -239,6 +241,7 @@ public class HttpRequestManager {
 
             @Override
             public void onFailed(int what, Response<String> response) {
+                LogUtils.d("RESPONSEINFO", params.url + ":" + response.get());
                 if (l != null) {
                     l.onTaskError(what, response);
                 }

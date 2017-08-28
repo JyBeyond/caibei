@@ -21,7 +21,7 @@ public class PostRequest extends BaseRequest<PostRequest> {
 
     public <T> void execute(Class<T> classOfT, RequestListener<T> l) {
         requestMethod(RequestMethod.POST);
-        HttpRequestManager.loadArray(this, new TypeToken<ResultDto<T>>() {
+        HttpRequestManager.loadArray(this, new TypeToken<ResultDto<T,Object>>() {
         }.getType(), l);
     }
 

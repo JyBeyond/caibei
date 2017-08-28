@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,7 +25,6 @@
                 android:textSize="16sp" />
         </RelativeLayout>
     </RelativeLayout>
- <android.support.v7.widget.RecyclerView
-     android:layout_width="match_parent"
-     android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    <include layout="@layout/item_discover_selection" />
 </LinearLayout>
