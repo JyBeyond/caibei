@@ -11,7 +11,7 @@ public class ConstantUtil {
     /**
      * 请求路径
      */
-    public static final String BASEPATH = "http://47.94.220.244:8080/";
+    public static final String BASEPATH = "http://icaibei.cn/";
     /**
      * 首页信息统计实时推送
      */
@@ -31,4 +31,9 @@ public class ConstantUtil {
      * 信用卡产品列表
      */
     public static final String CREDITPAGE = BASEPATH + "front/credit/creditPage.json";
+
+    /**
+     *
+     */
+    public static final String LENDDETAIL = BASEPATH + "front/lend/lendDetail.json";
 }

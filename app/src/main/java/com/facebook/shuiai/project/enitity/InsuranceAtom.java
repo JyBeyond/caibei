@@ -8,12 +8,19 @@ package com.facebook.shuiai.project.enitity;
  */
 
 public class InsuranceAtom {
-
+    private String identifier;
     private String safeName;
     private String safePicUrl;
     private String safeUrl;
     private String safeSpecial;
 
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
+    }
 
     public String getSafeName() {
         return safeName;

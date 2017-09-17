@@ -4,6 +4,7 @@ import android.app.Activity;
 
 import java.util.List;
 
+
 /**
  * @author shuiai@dianjia.io
  * @Company 杭州木瓜科技有限公司
@@ -30,4 +31,6 @@ public class ActivityUtil {
             activity.finish();
         }
     }
+
+
 }

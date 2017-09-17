@@ -61,6 +61,9 @@
         <activity
             android:name=".activity.GuideActivity_"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoansDetailActivity_"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

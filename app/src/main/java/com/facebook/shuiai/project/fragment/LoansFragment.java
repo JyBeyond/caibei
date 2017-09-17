@@ -1,5 +1,6 @@
 package com.facebook.shuiai.project.fragment;
 
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,7 +9,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.facebook.shuiai.project.R;
+import com.facebook.shuiai.project.activity.LoansDetailActivity_;
 import com.facebook.shuiai.project.adapter.LoansListAdapter;
 import com.facebook.shuiai.project.enitity.LoansAtom;
 import com.facebook.shuiai.project.enitity.ResultDto;
@@ -32,7 +35,7 @@ import in.srain.cube.views.ptr.PtrHandler;
  * @date 2017/8/21
  */
 
-public class LoansFragment extends BaseFragment implements PtrHandler, View.OnClickListener {
+public class LoansFragment extends BaseFragment implements PtrHandler, View.OnClickListener, BaseQuickAdapter.OnItemClickListener {
     private RecyclerView recyclerView;
     private int pageNum = 1;
     private PtrClassicFrameLayout ptrClassicFrameLayout;
@@ -78,6 +81,7 @@ public class LoansFragment extends BaseFragment implements PtrHandler, View.OnCl
     public void initData() {
         loansListAdapter = new LoansListAdapter(mContext, loansAtoms);
         recyclerView.setAdapter(loansListAdapter);
+        loansListAdapter.setOnItemClickListener(this);
         refreshTask();
     }
 
@@ -199,4 +203,12 @@ public class LoansFragment extends BaseFragment implements PtrHandler, View.OnCl
         textView3.setTextColor(getResources().getColor(R.color.textClr));
     }
 
+    @Override
+    public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+        List<LoansAtom> loansAtoms = adapter.getData();
+        LoansAtom loansAtom = loansAtoms.get(position);
+        Intent intent = new Intent(mContext, LoansDetailActivity_.class);
+        intent.putExtra("id", loansAtom.getIdentifier());
+        startActivity(intent);
+    }
 }

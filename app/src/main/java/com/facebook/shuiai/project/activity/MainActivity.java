@@ -98,14 +98,15 @@ public class MainActivity extends BaseActivity {
                         transaction.hide(fragment);
                     }
                     //添加Fragment
-                    transaction.add(R.id.frameLayout, nextFragment).commit();
+                    transaction.add(R.id.frameLayout, nextFragment);
                 } else {
                     //隐藏当前Fragment
                     if (fragment != null) {
                         transaction.hide(fragment);
                     }
-                    transaction.show(nextFragment).commit();
+                    transaction.show(nextFragment);
                 }
+                transaction.commit();
             }
         }
     }

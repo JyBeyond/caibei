@@ -77,4 +77,17 @@ public class RequestTaskBiz {
                 .execute(listener);
 
     }
+
+    /**
+     * 获取贷款详情
+     *
+     * @param mContext
+     * @param what
+     * @param listener
+     */
+    public static void getLoansDetail(Context mContext, String id, int what, RequestListener listener) {
+        IRequest.get(mContext, ConstantUtil.LENDDETAIL, what)
+                .params("identifier", id)
+                .execute(listener);
+    }
 }

@@ -8,6 +8,7 @@ package com.facebook.shuiai.project.enitity;
  */
 
 public class LoansAtom {
+    private String identifier;
     private String lendName;
     private String lendPicUrl;
     private String platformNature;
@@ -16,6 +17,14 @@ public class LoansAtom {
     private String lendSpecial;
     private String monthlyInterestRate;
     private String lendMoney;
+
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
+    }
 
     public String getLendName() {
         return lendName;

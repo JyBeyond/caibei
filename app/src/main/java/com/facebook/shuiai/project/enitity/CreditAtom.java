@@ -9,11 +9,19 @@ package com.facebook.shuiai.project.enitity;
 
 public class CreditAtom {
 
-
+   private String identifier;
     private String criditName;
     private String criditPicUrl;
     private String criditUrl;
     private String criditSpecial;
+
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
+    }
 
     public String getCriditName() {
         return criditName;
