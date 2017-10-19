@@ -8,11 +8,11 @@ package com.facebook.shuiai.project.enitity;
  */
 
 public class HomeInfoAtom {
-    private String createDate;
-    private String phone;
-    private String lendMoney;
-    private String servicePersonTime;
-    private String totalLendMoney;
+    private String createDate="--";
+    private String phone="--";
+    private String lendMoney="--";
+    private String servicePersonTime="--";
+    private String totalLendMoney="--";
 
     public String getCreateDate() {
         return createDate;

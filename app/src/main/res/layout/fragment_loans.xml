@@ -40,10 +40,10 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/txt_through_rate"
+                android:id="@+id/txt_limit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="通过率"
+                android:text="额度"
                 android:textColor="@color/textClr"
                 android:textSize="@dimen/txt_fourteen_size" />
 
@@ -79,7 +79,7 @@
                 android:id="@+id/txt_through_put"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="放宽速度"
+                android:text="通过率"
                 android:textColor="@color/textClr"
                 android:textSize="@dimen/txt_fourteen_size" />
 

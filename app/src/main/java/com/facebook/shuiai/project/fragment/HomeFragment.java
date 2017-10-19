@@ -112,17 +112,12 @@ public class HomeFragment extends BaseFragment implements PtrHandler {
                     return;
                 List<HomeInfoAtom> homeInfoAtoms = resultDto.getProperties();
                 HomeInfoAtom homeInfoAtom = homeInfoAtoms.get(0);
-                if (!StringUtil.isNull(homeInfoAtom.getCreateDate())) {
+                if (homeInfoAtom==null)
+                    return;
                     txtDate.setText(StringUtil.dateToCustomStr(Long.valueOf(homeInfoAtom.getCreateDate()), "yyyy:MM:dd HH:mm"));
-                } else {
-                    txtDate.setText("--");
-                }
+
                 txtPhone.setText(homeInfoAtom.getPhone());
-                if (StringUtil.isNull(homeInfoAtom.getLendMoney())) {
-                    txtCount.setText("--");
-                } else {
                     txtCount.setText(homeInfoAtom.getLendMoney());
-                }
                 txtTotalLoans.setText(homeInfoAtom.getTotalLendMoney());
                 txtTotalPerson.setText(homeInfoAtom.getServicePersonTime());
                 break;

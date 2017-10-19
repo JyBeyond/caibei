@@ -43,7 +43,7 @@ public class LoansFragment extends BaseFragment implements PtrHandler, View.OnCl
     private boolean loadMore = false;
     private LoansListAdapter loansListAdapter;
     private LinearLayout throughRateLayout, throughPutLayout, monthRateLayout;
-    private TextView txtThroughRate, txtThroughPut, txtMonthhRate;
+    private TextView txtLimit, txtThroughPut, txtMonthhRate;
     private ImageView imgThroughRateUp, imgThroughRateDown, imgThroughPutUp, imgThroughPutDown, imgMonthRateUp, imgMonthRateDown;
     private String type = "-1";//1:通过率2:放宽速度3:月利率
     private int sortType = -1;//0:降序1:升序
@@ -61,7 +61,7 @@ public class LoansFragment extends BaseFragment implements PtrHandler, View.OnCl
 
     private void initScreenView(View view) {
         throughRateLayout = (LinearLayout) view.findViewById(R.id.through_rate_layout);
-        txtThroughRate = (TextView) view.findViewById(R.id.txt_through_rate);
+        txtLimit = (TextView) view.findViewById(R.id.txt_limit);
         imgThroughRateUp = (ImageView) view.findViewById(R.id.img_through_rate_up);
         imgThroughRateDown = (ImageView) view.findViewById(R.id.img_through_rate_down);
         throughPutLayout = (LinearLayout) view.findViewById(R.id.through_put_layout);
@@ -160,17 +160,17 @@ public class LoansFragment extends BaseFragment implements PtrHandler, View.OnCl
     private void changeView(String type) {
         switch (type) {
             case "1":
-                setTextColor(txtThroughRate, txtThroughPut, txtMonthhRate);
+                setTextColor(txtLimit, txtThroughPut, txtMonthhRate);
                 setImageDown(imgThroughRateDown, imgThroughPutDown, imgMonthRateDown);
                 setImageUp(imgThroughRateUp, imgThroughPutUp, imgMonthRateUp);
                 break;
             case "2":
-                setTextColor(txtThroughPut, txtThroughRate, txtMonthhRate);
+                setTextColor(txtThroughPut, txtLimit, txtMonthhRate);
                 setImageDown(imgThroughPutDown, imgThroughRateDown, imgMonthRateDown);
                 setImageUp(imgThroughPutUp, imgThroughRateUp, imgMonthRateUp);
                 break;
             case "3":
-                setTextColor(txtMonthhRate, txtThroughPut, txtThroughRate);
+                setTextColor(txtMonthhRate, txtThroughPut, txtLimit);
                 setImageDown(imgMonthRateDown, imgThroughPutDown, imgThroughRateDown);
                 setImageUp(imgMonthRateUp, imgThroughPutUp, imgThroughRateUp);
                 break;
